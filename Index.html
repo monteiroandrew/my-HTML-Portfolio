@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">Andrew</a>
+
+        <nav>
+            <a href="#" class="Active">Home</a>
+            <a href="#">Certification</a>
+            <a href="#">Education</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <section class="home">
+        <div class="home-img">
+            <img src="Picture.jpg" alt="">
+        </div>
+        <div class="home-content">
+            <h1>Hi, It's <span>Andrew</span></h1>
+            <h3 class="typing-text">I'm <span></span></h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In dignissimos facere debitis similique ab deleniti adipisci maxime ipsa atque ratione nam ea, placeat perspiciatis facilis iste, autem, beatae explicabo ipsum!</p>
+         <div class="social-icons">
+            <a href="https://www.facebook.com/share/1GCHfQK8ZM/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://github.com/monteiroandrew" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://x.com/thatboydrrww" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/unc.druu?igsh=b2dsOGFtZ3Vrc2dj" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+         </div>
+         <a href="#"class="btn">Hire me</a>
+        </div>
+    </section>
+
+<!-- Certification Modal -->
+<div id="certModal" class="modal">
+  <div class="modal-content animate">
+    <span class="close">&times;</span>
+    <h2>My Certificates</h2>
+    <ul>
+      <li><a href="https://www.credly.com/badges/1c994ca9-273e-4590-901f-e5aa41056af4/public_url" target="_blank">
+        <i class="fa-solid fa-file-certificate"></i> Microsoft Excel 2019 Certification
+      </a></li>
+    </ul>
+    <h2>Basic Certificates</h2>
+    <ul>
+      <li><a href="https://www.credly.com/badges/ec107e4c-0e49-48d5-8366-2697019eae7d/public_url" target="_blank">
+        <i class="fa-solid fa-code"></i> Python Essentials 1
+      </a></li>
+      <li><a href="https://www.credly.com/badges/f7d12c0f-4819-4a68-8361-1d0a46bab16b/public_url" target="_blank">
+        <i class="fa-solid fa-code"></i> Python Essentials 2
+      </a></li>
+      <li><a href="https://www.credly.com/badges/d352b5d5-8cb5-4f88-909d-f9e2ee453039/public_url" target="_blank">
+        <i class="fa-solid fa-lightbulb"></i> Enterprise Design Thinking Practitioner
+      </a></li>
+      <li><a href="https://www.credly.com/badges/51027ded-e06b-44fe-9625-23b7d687943e/public_url" target="_blank">
+        <i class="fa-solid fa-user-graduate"></i> Lifelong Professional Skills 2
+      </a></li>
+    </ul>
+  </div>
+</div>
+
+
+<script>
+ var modal = document.getElementById("certModal");
+ var certLink = document.querySelector("nav a:nth-child(2)"); // Certification link
+ var closeBtn = document.querySelector(".close");
+ var modalContent = document.querySelector(".modal-content");
+
+// Open modal with animation
+certLink.onclick = function(event) {
+  event.preventDefault();
+  modal.style.display = "block";
+  setTimeout(() => modalContent.classList.add("show"), 10);
+}
+
+// Close modal
+closeBtn.onclick = function() {
+  modal.style.display = "none";
+  modalContent.classList.remove("show");
+}
+
+// Close when clicking outside
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+    modalContent.classList.remove("show");
+  }
+}
+</script>
+
+
+</body>
+</html>
