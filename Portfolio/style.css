@@ -259,3 +259,92 @@ span{
     }
 }
 
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 200;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+  background-color: #161616;
+  margin: 5% auto;
+  padding: 3rem;
+  border: 2px solid #b74b4b;
+  width: 70%;
+  max-width: 900px;
+  color: white;
+  border-radius: 1rem;
+  box-shadow: 0 0 25px rgba(183, 75, 75, 0.6);
+  transform: scale(0.7) translateY(30px);
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.modal-content.show {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+}
+
+.modal-content h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #b74b4b;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  border-bottom: 2px solid #b74b4b;
+  padding-bottom: 1rem;
+}
+
+.modal-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.modal-content ul li {
+  margin: 1rem 0;
+  font-size: 2rem;
+  font-weight: 600;
+  background-color: #1f1f1f;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.modal-content ul li a {
+  color: #b74b4b;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.modal-content ul li:hover {
+  transform: scale(1.08); /* slightly bigger */
+  box-shadow: 0 0 20px #b74b4b; /* glowing effect */
+  color: #b74b4b; /* text glow */
+  cursor: pointer;
+  color: white;
+}
+
+.close {
+  color: #b74b4b;
+  float: right;
+  font-size: 3rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.close:hover {
+  transform: scale(1.3); /* slightly bigger */
+  color: white;          /* change color on hover */
+  text-shadow: 0 0 15px #b74b4b; /* glowing effect */
+}
+
+
