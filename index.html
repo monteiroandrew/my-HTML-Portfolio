@@ -16,9 +16,10 @@
 
         <nav>
             <a href="#" class="Active">Home</a>
-            <a href="#">Certification</a>
+            <a href="#">Achievements</a>
             <a href="#">Education</a>
-            <a href="#">Contact</a>
+            <a href="#">Socials</a>
+            <a href="#">About me</a>
         </nav>
     </header>
     <section class="home">
@@ -28,14 +29,14 @@
         <div class="home-content">
             <h1>Hi, It's <span>Andrew</span></h1>
             <h3 class="typing-text">I'm <span></span></h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In dignissimos facere debitis similique ab deleniti adipisci maxime ipsa atque ratione nam ea, placeat perspiciatis facilis iste, autem, beatae explicabo ipsum!</p>
+            <p>Passionate about technology and continuous learning. I enjoy building practical solutions, exploring new technologies, and turning ideas into functional applications. Every project is an opportunity to improve my skills and create something meaningful.</p>
          <div class="social-icons">
             <a href="https://www.facebook.com/share/1GCHfQK8ZM/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
             <a href="https://github.com/monteiroandrew" target="_blank"><i class="fa-brands fa-github"></i></a>
             <a href="https://x.com/thatboydrrww" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
             <a href="https://www.instagram.com/unc.druu?igsh=b2dsOGFtZ3Vrc2dj" target="_blank"><i class="fa-brands fa-instagram"></i></a>
          </div>
-         <a href="#"class="btn">Hire me</a>
+         <a href="#"class="btn">Contact me</a>
         </div>
     </section>
 
@@ -43,10 +44,10 @@
 <div id="certModal" class="modal">
   <div class="modal-content animate">
     <span class="close">&times;</span>
-    <h2>My Certificates</h2>
+    <h2>Professional Credential</h2>
     <ul>
       <li><a href="https://www.credly.com/badges/1c994ca9-273e-4590-901f-e5aa41056af4/public_url" target="_blank">
-        <i class="fa-solid fa-file-certificate"></i> Microsoft Excel 2019 Certification
+        <i class="fa-solid fa-file-certificate"></i> Excel Associate (Excel 2019)
       </a></li>
     </ul>
     <h2>Basic Certificates</h2>
@@ -94,6 +95,29 @@ window.onclick = function(event) {
     modalContent.classList.remove("show");
   }
 }
+
+
+// Get Contact link and social icons
+var contactLink = document.querySelector("nav a:nth-child(4)");
+var socialIcons = document.querySelectorAll(".social-icons a");
+
+// Add click event
+contactLink.onclick = function(event) {
+  event.preventDefault();
+
+  // Add glow class to each icon
+  socialIcons.forEach(icon => {
+    icon.classList.add("glow");
+  });
+
+  // Remove glow after 3 seconds
+  setTimeout(() => {
+    socialIcons.forEach(icon => {
+      icon.classList.remove("glow");
+    });
+  }, 3000);
+};
+
 </script>
 
 
