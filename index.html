@@ -68,6 +68,30 @@
   </div>
 </div>
 
+<!-- Education Modal -->
+<div id="eduModal" class="modal">
+  <div class="modal-content animate">
+    <span class="close">&times;</span> <!-- use the same class -->
+    <h2>Education</h2>
+    <div class="edu-content">
+      <div class="edu-img">
+        <img src="Grad_pic.jpg" alt="Education Image">
+      </div>
+      <ul>
+        <li><strong>Elementary:</strong> Liliw Central Elementary School (2011-2017)</li>
+        <li><strong>Junior High School:</strong> Liceo de Liliw (2018-2022)</li>
+        <li><strong>Senior High School:</strong> Liceo de Liliw (2023-2024)</li>
+        <h1>Strand: General Academic Strand (GAS)</h1>
+        <li><strong>College:</strong> Laguna State Polytechnic University (SPCC)</li>
+        <h1>Program: Bachelor of Science in Information Technology</h1>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+
 
 <script>
  var modal = document.getElementById("certModal");
@@ -117,6 +141,37 @@ contactLink.onclick = function(event) {
     });
   }, 3000);
 };
+
+
+// Education modal
+var eduModal = document.getElementById("eduModal");
+var eduLink = document.querySelector("nav a:nth-child(3)"); // Education link
+var closeEdu = eduModal.querySelector(".close"); // finds the close inside eduModal
+var eduContent = eduModal.querySelector(".modal-content");
+
+// Open education modal
+eduLink.onclick = function(event) {
+  event.preventDefault();
+  eduModal.style.display = "block";
+  setTimeout(() => eduContent.classList.add("show"), 10);
+}
+
+// Close education modal
+closeEdu.onclick = function() {
+  eduModal.style.display = "none";
+  eduContent.classList.remove("show");
+}
+
+// Close when clicking outside
+window.onclick = function(event) {
+  if (event.target == eduModal) {
+    eduModal.style.display = "none";
+    eduContent.classList.remove("show");
+  }
+}
+
+
+
 
 </script>
 

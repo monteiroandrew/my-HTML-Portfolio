@@ -377,3 +377,30 @@ span{
   color: black;
   box-shadow: 0 0 15px #b74b4b;
 }
+
+.edu-img {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.edu-img img {
+  max-width: 250px;
+  border-radius: 50%;
+  border: 3px solid #b74b4b;
+  box-shadow: 0 0 20px #b74b4b;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.edu-img img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px #b74b4b;
+}
+
+/* Make all text inside Education modal #b74b4b */
+#eduModal .modal-content,
+#eduModal .modal-content h2,
+#eduModal .modal-content h3,
+#eduModal .modal-content ul li,
+#eduModal .modal-content ul li strong {
+  color: #b74b4b;
+}
